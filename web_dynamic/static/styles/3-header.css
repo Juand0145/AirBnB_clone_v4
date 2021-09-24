@@ -9,20 +9,14 @@ header .logo {
     left: 20px;
     height: 100%;
 }
-.available {
-    background-color: #ff545f;
-}
-.css_api_status {
-    /* Align to the right */
+#api_status {
     margin-left: auto;
-    margin-right: 0;
-    /* Center vertically */
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    margin-right: 30 px;
+    width: 40px;
+    height: 40px;
     border-radius: 40px;
-    border-right: 40px;
     background-color: #CCCCCC;
+}
+#api_status .available {
+    background-color: #ff545f;
 }
