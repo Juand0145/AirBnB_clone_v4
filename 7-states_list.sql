@@ -70,6 +70,18 @@ CREATE TABLE `states` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+DROP TABLE IF EXISTS `amenities`;
+
+CREATE TABLE `amenities` (
+  `id` varchar(60) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO amenities (id, name)
+VALUES ("1", "Buffet"), ("2", "Wifi"), ("3", "Mucama"), ("4", "Estufa");
 --
 -- Dumping data for table `states`
 --
