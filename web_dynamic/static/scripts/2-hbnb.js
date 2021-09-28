@@ -13,15 +13,17 @@ $(document).ready(function () {
       $("div.amenities > h4").html("&nbsp;");
     }
   });
+  const url = "http://localhost:5001/api/v1/status/"
+  
+  
+  $.get(url, function (data) {
+    console.log("Si wenas-------------------------")
+    if (data.status ===  "OK") {
+      $("#api_status").addClass("available");
+      console.log("Viveeeeeeeeeeeeeeeeeeeeee")
+    } else {
+      $("#api_status").removeClass("available");
+    }
+  });
 });
 
-const url = "http://0.0.0.0:5001/api/v1/status/"
-
-
-$.get(url, function (data, statusText, xhr) {
-  if (xhr.status === 200) {
-    $("div#api_status").addClass("available");
-  } else {
-    $("div#api_status").removeClass("available");
-  }
-});
